@@ -1,13 +1,14 @@
 import loginPage from "../pages/login-page";
+import listingPage from "../pages/listing-page";
 
 describe('Logintest', function() {
     it('As a user I am able to login', function() {
         loginPage.open();
-        loginPage.usernameInput().type(Cypress.config('standarduser'))
-        loginPage.passwordInput().type("secret_sauce")
+        loginPage.usernameInput().type(Cypress.env('standarduser'));
+        loginPage.passwordInput().type(Cypress.env('standarduserPw'));
         loginPage.submit();
     
-        expect(true).to.equal(true)
+        listingPage.headline().should('have.text', 'Products');
     })
 })
 

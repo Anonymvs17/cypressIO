@@ -3,14 +3,7 @@ class ListingPage {
      /**
     * define elements
     */
-
-   usernameInput()   { return cy.get('#user-name') }
-   passwordInput()   { return cy.get('#password')}
-   submit()     { return cy.get('[type="submit"]').click() }
-
-   /**
-    * define or overwrite page methods
-    */
+   headline()   { return cy.get('.product_label') }
 }
 
 export default new ListingPage()

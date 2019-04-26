@@ -10,5 +10,3 @@ describe('Search Test', function() {
         expect(true).to.equal(true)
     })
 })
-
-//start with .\node_modules\.bin\cypress open
