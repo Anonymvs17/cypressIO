@@ -1,12 +1,16 @@
-import loginPage from "../pages/login-page";
+import loginEvent from "../saucedemo/events/loginEvent";
+import listingPage from "../pages/listing-page";
+import cartPage from "../pages/cart-page";
 
-describe('Search Test', function() {
-    it('As a user I am able to search for a product', function() {
-        loginPage.open();
-        loginPage.usernameInput().type(Cypress.config('standarduser'))
-        loginPage.passwordInput().type("secret_sauce")
-        loginPage.submit();
+describe('Checkout test', function() {
+    it('Can add a product to cart', function() {
+        loginEvent.execute();
+        listingPage.addToCartButtons().first().click();
+        listingPage.cartIcon().click();
+    })
     
-        expect(true).to.equal(true)
+    it('Can proceed over the cart page', function() {
+        cartPage.headline().should('have.text', 'Your Cart');
+        cartPage.proceedToCheckoutButton().click;
     })
 })
