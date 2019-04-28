@@ -1,10 +1,9 @@
-Boilerplate project of cypress.io demonstrating a automation of a sample webshop.
-
+Boilerplate project of cypress.io demonstrating ui automation of the www.saucedemo.com website.
 # Configuration
 
 * First run 
 ```
-npm install
+npm install cypress
 ```
 
 # Starting cypress
