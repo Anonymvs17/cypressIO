@@ -12,7 +12,7 @@ class LoginPage {
     * define or overwrite page methods
     */
    open () {
-    cy.visit(Cypress.config('baseUrl'))    
+    cy.visit(Cypress.config('baseUrl'))   
    }
 }
 
